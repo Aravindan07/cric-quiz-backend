@@ -4,9 +4,8 @@ const Quiz = require("../models/quiz.model");
 
 router.get("/", async (req, res) => {
 	const { category } = req.query;
-	console.log("category", category);
 	try {
-		if (category === "random") {
+		if (category === "Random") {
 			const questions = await Quiz.find({}).select("-__v");
 			return res.status(200).json({ message: "Fetched successfully!", questions });
 		}
