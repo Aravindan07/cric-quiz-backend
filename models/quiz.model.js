@@ -5,7 +5,7 @@ const quizSchema = new Schema({
 	question: String,
 	imageUrl: String,
 	correctAnswer: String,
-	options: [{ type: String }],
+	options: [{ name: String, correct: Boolean }],
 	category: String,
 	difficulty: String,
 });
