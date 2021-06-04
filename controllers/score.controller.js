@@ -25,7 +25,6 @@ const addScore = async (req, res) => {
 			foundUserScore && foundUserScore.quiz.find((quiz) => quiz.quizName === quizName);
 		if (foundUserScore) {
 			if (checkQuizPresent) {
-				console.log("inside CheckPresent", checkQuizPresent);
 				foundUserScore.quiz.map((quiz) =>
 					quiz.quizName === quizName
 						? ((quiz.scores = [...quiz.scores, score]),
